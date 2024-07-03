@@ -1,7 +1,7 @@
 import React from "react";
 import "./Relatedproducts.css";
 import Item from "../Item/Item";
-const RelatedProducts = ({ products }) => {
+const RelatedProducts = ({ products, addtocart }) => {
   return (
     <div className="relatedproducts">
       <h1>Related Products</h1>
@@ -16,6 +16,7 @@ const RelatedProducts = ({ products }) => {
               image={item.image}
               new_price={item.price}
               old_price={1}
+              addtocart={addtocart}
             />
           );
         })}

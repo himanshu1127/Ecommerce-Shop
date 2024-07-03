@@ -24,6 +24,7 @@ const Category = (props) => {
                 name={item.title}
                 new_price={item.price}
                 old_price={100}
+                addtocart={props.addtocart}
               />
             );
           }

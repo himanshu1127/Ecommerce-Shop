@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./ProductDisplay.css";
+import { ShopContext } from "../../Context/ShopContext";
+import { useParams } from "react-router-dom";
 
 const ProductDisplay = (props) => {
   const current = props.product;
   const product = current[0];
+
+  console.log(product);
+  const { addToCart } = useContext(ShopContext);
 
   return (
     <div className="productdisplay">
@@ -44,7 +49,7 @@ const ProductDisplay = (props) => {
             <div>XXL</div>
           </div>
         </div>
-        <button>ADD TO CART</button>
+        <button onClick={() => addToCart(product)}>ADD TO CART</button>
       </div>
     </div>
   );

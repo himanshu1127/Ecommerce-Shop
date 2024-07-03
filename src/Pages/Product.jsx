@@ -7,8 +7,6 @@ import RelatedProducts from "../Components/Relatedproducts/RelatedProducts";
 
 const Product = ({ product }) => {
   const productId = useParams();
-  console.log(product);
-  console.log(productId);
 
   const CurrentProduct = product.filter((item) => {
     return item.id == Number(productId.productId);

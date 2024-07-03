@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Shop from "./Pages/Shop";
@@ -9,28 +9,34 @@ import LoginSignup from "./Pages/LoginSignup";
 
 import "./App.css";
 import Footer from "./Components/Footer/Footer";
+import Item from "./Components/Item/Item";
+import { ShopContext } from "./Context/ShopContext";
 
 function App() {
-  const [products, setproducts] = useState();
+  const { newProducts } = useContext(ShopContext);
+  const products = newProducts;
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      fetch("https://fakestoreapi.com/products", {
-        mode: "cors",
-      })
-        .then((response) => response.json())
-        .then((response) => {
-          setproducts(response);
-        })
-        .catch((error) => console.error(error));
-    };
-    fetchProducts();
-  }, []);
+  // const [products, setProducts] = useState();
+  // setProducts(newProducts);
+
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     fetch("https://fakestoreapi.com/products", {
+  //       mode: "cors",
+  //     })
+  //       .then((response) => response.json())
+  //       .then((response) => {
+  //         setProducts(response);
+  //       })
+  //       .catch((error) => console.error(error));
+  //   };
+  //   fetchProducts();
+  // }, []);
 
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        <Navbar size={0} />
         <Routes>
           <Route path="/" element={<Shop products={products} />} />
           <Route
