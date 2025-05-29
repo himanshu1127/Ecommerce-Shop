@@ -3,10 +3,10 @@ import { ArrowRight, Gift, Percent, Clock } from 'lucide-react'
 
 const Offers = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-br from-orange-50 via-red-50 to-pink-50 relative overflow-hidden w-full">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-40 h-40 bg-orange-200 rounded-full opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-32 h-32 bg-pink-200 rounded-full opacity-20 translate-x-1/2 translate-y-1/2"></div>
+      <div className="absolute top-0 left-0 w-24 lg:w-40 h-24 lg:h-40 bg-orange-200 rounded-full opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-20 lg:w-32 h-20 lg:h-32 bg-pink-200 rounded-full opacity-20 translate-x-1/2 translate-y-1/2"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -77,13 +77,13 @@ const Offers = () => {
               </div>
               
               {/* Floating discount badge */}
-              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-red-500 to-orange-500 text-white p-6 rounded-full text-center font-bold shadow-xl animate-pulse">
-                <div className="text-2xl">70%</div>
+              <div className="absolute -top-3 -right-3 lg:-top-6 lg:-right-6 bg-gradient-to-r from-red-500 to-orange-500 text-white p-3 lg:p-6 rounded-full text-center font-bold shadow-xl animate-pulse">
+                <div className="text-lg lg:text-2xl">70%</div>
                 <div className="text-xs">OFF</div>
               </div>
               
               {/* Sale timer */}
-              <div className="absolute -bottom-4 -left-4 bg-white shadow-lg rounded-xl p-4">
+              <div className="absolute -bottom-2 -left-2 lg:-bottom-4 lg:-left-4 bg-white shadow-lg rounded-xl p-2 lg:p-4">
                 <div className="text-center">
                   <div className="text-red-600 font-bold text-lg">23:59:45</div>
                   <div className="text-xs text-gray-600">Time Left</div>

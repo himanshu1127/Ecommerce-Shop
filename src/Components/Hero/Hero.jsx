@@ -3,11 +3,11 @@ import { ArrowRight, Sparkles, TrendingUp } from 'lucide-react'
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden w-full">
       {/* Background decorative elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
-      <div className="absolute top-32 right-20 w-16 h-16 bg-purple-200 rounded-full opacity-20 animate-pulse delay-1000"></div>
-      <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-pink-200 rounded-full opacity-20 animate-pulse delay-500"></div>
+      <div className="absolute top-10 left-4 lg:left-10 w-16 lg:w-20 h-16 lg:h-20 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
+      <div className="absolute top-32 right-4 lg:right-20 w-12 lg:w-16 h-12 lg:h-16 bg-purple-200 rounded-full opacity-20 animate-pulse delay-1000"></div>
+      <div className="absolute bottom-20 left-1/4 w-8 lg:w-12 h-8 lg:h-12 bg-pink-200 rounded-full opacity-20 animate-pulse delay-500"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -86,11 +86,11 @@ const Hero = () => {
               </div>
               
               {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-bounce">
+              <div className="absolute -top-2 -right-2 lg:-top-4 lg:-right-4 bg-red-500 text-white px-2 py-1 lg:px-4 lg:py-2 rounded-full text-xs lg:text-sm font-semibold shadow-lg animate-bounce">
                 70% OFF
               </div>
               
-              <div className="absolute -bottom-4 -left-4 bg-white shadow-lg rounded-lg p-4 animate-bounce delay-500">
+              <div className="absolute -bottom-2 -left-2 lg:-bottom-4 lg:-left-4 bg-white shadow-lg rounded-lg p-2 lg:p-4 animate-bounce delay-500">
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                     <span className="text-white text-xs">✓</span>

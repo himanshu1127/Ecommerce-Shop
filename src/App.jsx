@@ -39,33 +39,35 @@ function App() {
   // }, []);
 
   return (
-    <div className="App">
+    <div className="App min-h-screen w-full overflow-x-hidden">
       <BrowserRouter>
         <Navbar size={getTotalCartItems()} />
-        <Routes>
-          <Route path="/" element={<Shop products={products} />} />
-          <Route
-            path="/Mens"
-            element={<Category category="men's clothing" product={products} />}
-          />
-          <Route
-            path="/Womens"
-            element={
-              <Category category="women's clothing" product={products} />
-            }
-          />
-          <Route
-            path="/Kids"
-            element={<Category category="Kids" product={products} />}
-          />
-          <Route path="/Product" element={<Product product={products} />} />
-          <Route
-            path="/Product/:productId"
-            element={<Product product={products} />}
-          />
-          <Route path="/Cart" element={<Cart />} />
-          <Route path="/Login" element={<LoginSignup />} />
-        </Routes>
+        <main className="w-full">
+          <Routes>
+            <Route path="/" element={<Shop products={products} />} />
+            <Route
+              path="/Mens"
+              element={<Category category="men's clothing" product={products} />}
+            />
+            <Route
+              path="/Womens"
+              element={
+                <Category category="women's clothing" product={products} />
+              }
+            />
+            <Route
+              path="/Kids"
+              element={<Category category="Kids" product={products} />}
+            />
+            <Route path="/Product" element={<Product product={products} />} />
+            <Route
+              path="/Product/:productId"
+              element={<Product product={products} />}
+            />
+            <Route path="/Cart" element={<Cart />} />
+            <Route path="/Login" element={<LoginSignup />} />
+          </Routes>
+        </main>
         <Footer />
       </BrowserRouter>
     </div>
