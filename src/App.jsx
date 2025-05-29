@@ -13,8 +13,13 @@ import Item from "./Components/Item/Item";
 import { ShopContext } from "./Context/ShopContext";
 
 function App() {
-  const { newProducts } = useContext(ShopContext);
+  const { newProducts, cartItems } = useContext(ShopContext);
   const products = newProducts;
+  
+  // Calculate total cart items
+  const getTotalCartItems = () => {
+    return cartItems.reduce((total, item) => total + item.quantity, 0);
+  };
 
   // const [products, setProducts] = useState();
   // setProducts(newProducts);
@@ -36,7 +41,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar size={0} />
+        <Navbar size={getTotalCartItems()} />
         <Routes>
           <Route path="/" element={<Shop products={products} />} />
           <Route

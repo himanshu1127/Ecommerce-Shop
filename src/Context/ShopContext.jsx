@@ -45,6 +45,21 @@ const ShopContextProvider = (props) => {
     });
     setCartItems(newcart);
   };
+
+  const updateQuantity = (id, newQuantity) => {
+    if (newQuantity <= 0) {
+      removeFromCart(id);
+    } else {
+      const newcart = [...cartItems].map((item) => {
+        if (item.id === id) {
+          return { ...item, quantity: newQuantity };
+        } else {
+          return item;
+        }
+      });
+      setCartItems(newcart);
+    }
+  };
   const getTotalCartAmount = () => {
     if (cartItems) {
       let amount = 0;
@@ -62,6 +77,7 @@ const ShopContextProvider = (props) => {
     cartItems,
     addToCart,
     removeFromCart,
+    updateQuantity,
     getTotalCartAmount,
   };
 
