@@ -27,7 +27,7 @@ const Item = ({ id, image, name, new_price, old_price, product }) => {
 
   return (
     <div 
-      className="group relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+      className="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-3 overflow-hidden border border-gray-100"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -42,8 +42,8 @@ const Item = ({ id, image, name, new_price, old_price, product }) => {
           
           {/* Discount Badge */}
           {discountPercentage > 0 && (
-            <div className="absolute top-3 left-3 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
-              -{discountPercentage}%
+            <div className="absolute top-3 left-3 bg-gradient-to-r from-red-500 to-orange-500 text-white px-3 py-2 rounded-full text-xs font-bold shadow-lg">
+              -{discountPercentage}% OFF
             </div>
           )}
 
@@ -73,10 +73,10 @@ const Item = ({ id, image, name, new_price, old_price, product }) => {
           }`}>
             <button
               onClick={handleAddToCart}
-              className={`transform transition-all duration-200 hover:scale-105 ${
+              className={`transform transition-all duration-200 hover:scale-105 flex justify-center items-center ${
                 isAdded 
-                  ? 'bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md'
-                  : 'btn-primary'
+                  ? 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg'
+                  : 'bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg'
               }`}
             >
               {isAdded ? (
@@ -136,10 +136,10 @@ const Item = ({ id, image, name, new_price, old_price, product }) => {
       <div className="md:hidden p-4 pt-0">
         <button
           onClick={handleAddToCart}
-          className={`w-full text-sm py-2 transition-all duration-200 ${
+          className={`w-full text-sm py-3 px-3 transition-all duration-200 flex items-center justify-center ${
             isAdded 
-              ? 'bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-md'
-              : 'btn-primary'
+              ? 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold rounded-lg shadow-lg'
+              : 'bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-semibold rounded-lg shadow-lg'
           }`}
         >
           {isAdded ? (
