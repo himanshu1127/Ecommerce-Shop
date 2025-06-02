@@ -26,7 +26,7 @@ const Navbar = ({ size }) => {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                MODERNSTORE
+                ELITEMART
               </h1>
             </Link>
           </div>

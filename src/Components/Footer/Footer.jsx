@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              MODERNSTORE
+              ELITEMART
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Your premier destination for fashion-forward clothing. 
@@ -47,10 +47,16 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-2">
-              {['About Us', 'Our Story', 'Careers', 'Press', 'Blog'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm">
-                    {link}
+              {[
+                { name: 'About Us', path: '/About' },
+                { name: 'Contact', path: '/Contact' },
+                { name: 'Careers', path: '#' },
+                { name: 'Press', path: '#' },
+                { name: 'Blog', path: '#' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <a href={link.path} className="text-gray-400 hover:text-white transition-colors duration-200 text-sm">
+                    {link.name}
                   </a>
                 </li>
               ))}
@@ -81,7 +87,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-primary" />
-                <span className="text-gray-400 text-sm">help@modernstore.com</span>
+                <span className="text-gray-400 text-sm">help@elitemart.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin size={16} className="text-primary mt-0.5" />
@@ -143,7 +149,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2024 ModernStore. All rights reserved.
+              © 2024 EliteMart. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">

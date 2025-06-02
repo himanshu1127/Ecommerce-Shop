@@ -6,6 +6,9 @@ import Category from "./Components/Catrgory/Category";
 import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import LoginSignup from "./Pages/LoginSignup";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 import "./App.css";
 import Footer from "./Components/Footer/Footer";
@@ -41,6 +44,7 @@ function App() {
   return (
     <div className="App min-h-screen w-full overflow-x-hidden">
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar size={getTotalCartItems()} />
         <main className="w-full">
           <Routes>
@@ -59,13 +63,14 @@ function App() {
               path="/Kids"
               element={<Category category="Kids" product={products} />}
             />
-            <Route path="/Product" element={<Product product={products} />} />
             <Route
-              path="/Product/:productId"
+              path="/product/:productId"
               element={<Product product={products} />}
             />
             <Route path="/Cart" element={<Cart />} />
             <Route path="/Login" element={<LoginSignup />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />
